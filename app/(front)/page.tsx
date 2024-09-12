@@ -1,9 +1,10 @@
+import Hero from "@/components/Frontend/Hero";
 import React from "react";
 
 export default function Home() {
   return (
-    <section className="text-3xl flex min-h-screen justify-center items-center">
-      <h2 className="font-semibold">This is CS50</h2>
+    <section className="max-w-6xl mx-auto">
+      <Hero/>
 
     </section>
   );
