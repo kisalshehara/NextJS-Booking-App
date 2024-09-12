@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
+import TransitionalText from "./TransitionalText";
 
 const Hero = () => {
     return (
@@ -7,11 +8,16 @@ const Hero = () => {
             <div className="relative bg-white pb-[110px] pt-[50px] dark:bg-dark lg:pt-[50px]">
                 <div className="container">
                     <div className="-mx-4 flex flex-wrap">
-                        <div className="w-full px-4 lg:w-5/12">
+                        <div className="w-full px-4 lg:w-6/12">
                             <div className="hero-content">
-                                <h1 className="mb-5 text-2xl font-bold !leading-[1.25] text-dark dark:text-white sm:text-[34px] lg:text-[32px] xl:text-[36px]">
-                                    Discover the healing power of Indigenous Medicine.
+                                <h1 className="mb-5 text-3xl font-bold !leading-[1.2] text-green-600 dark:text-white sm:text-[38px] lg:text-[36px] xl:text-[40px] flex flex-col">
+                                    <span className="flex flex-wrap">
+                                        Book your &nbsp; <TransitionalText />
+                                    </span>
+                                    <span className="mt-1">Session Now</span>
                                 </h1>
+
+
 
 
                                 <p className="mb-8 max-w-[480px] text-base text-gray-500 dark:text-gray-50-6">
@@ -19,7 +25,7 @@ const Hero = () => {
                                 </p>
                                 <SearchBar />
                                 {/* CTA BUTTONS */}
-                                <ul className="flex flex-wrap items-center mt-6">
+                                <ul className="flex flex-wrap items-center mt-9">
                                     <li>
                                         <a
                                             href="/#"
@@ -70,7 +76,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="hidden px-4 lg:block lg:w-1/12"></div>
-                        <div className="w-full px-4 lg:w-6/12">
+                        <div className="w-full px-4 lg:w-5/12">
                             <div className="lg:ml-auto lg:text-right">
                                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                                     <img
