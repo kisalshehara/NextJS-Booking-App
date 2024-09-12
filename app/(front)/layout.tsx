@@ -1,3 +1,4 @@
+import { MegaMenu } from '@/components/Frontend/MegaMenu';
 import React, { ReactNode } from 'react';
 
 function Layout({ children }: { children: ReactNode }) {
