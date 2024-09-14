@@ -5,31 +5,31 @@ import TransitionalText from "./TransitionalText";
 const Hero = () => {
     return (
         <>
-            <div className="relative bg-white pb-[110px] pt-[50px] dark:bg-dark lg:pt-[50px]">
-                <div className="container">
-                    <div className="-mx-4 flex flex-wrap">
+            <div className="relative bg-gradient-to-r from-green-700 to-green-950 pb-[110px] pt-[50px] dark:bg-dark lg:pt-[70px]">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-wrap items-center">
+                        {/* Left Text Section */}
                         <div className="w-full px-4 lg:w-6/12">
                             <div className="hero-content">
-                                <h1 className="mb-5 text-3xl font-bold !leading-[1.2] text-green-600 dark:text-white sm:text-[38px] lg:text-[36px] xl:text-[40px] flex flex-col">
+                                <h1 className="mb-5 text-4xl font-bold leading-tight text-white dark:text-gray-100 sm:text-[38px] lg:text-[42px] xl:text-[46px]">
                                     <span className="flex flex-wrap">
-                                        Book your &nbsp; <TransitionalText />
+                                        Book your &nbsp;<TransitionalText />
                                     </span>
                                     <span className="mt-1">Session Now</span>
                                 </h1>
 
-
-
-
-                                <p className="mb-8 max-w-[480px] text-base text-gray-500 dark:text-gray-50-6">
+                                <p className="mb-8 max-w-[500px] text-lg text-gray-100 dark:text-gray-300">
                                     Bringing the wisdom of Sri Lanka’s Indigenous medical systems into the 21st century, we offer holistic solutions tailored to your unique wellness needs.
                                 </p>
+                                {/* Search Bar Component */}
                                 <SearchBar />
-                                {/* CTA BUTTONS */}
-                                <ul className="flex flex-wrap items-center mt-9">
+
+                                {/* CTA Buttons */}
+                                <ul className="flex flex-wrap items-center mt-9 space-x-6">
                                     <li>
                                         <a
                                             href="/#"
-                                            className="inline-flex items-center justify-center rounded-md bg-green-600 px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
+                                            className="inline-flex items-center justify-center rounded-md bg-green-600 px-6 py-3 text-center text-base font-medium text-white transition-all duration-300 hover:bg-green-700 lg:px-8"
                                         >
                                             Get Started
                                         </a>
@@ -37,7 +37,7 @@ const Hero = () => {
                                     <li>
                                         <a
                                             href="/#"
-                                            className="inline-flex items-center justify-center px-5 py-3 text-center text-base font-medium text-[#464646] hover:text-primary dark:text-white"
+                                            className="inline-flex items-center justify-center px-5 py-3 text-center text-base font-medium text-gray-300 transition-all duration-300 hover:text-white dark:text-white"
                                         >
                                             <span className="mr-2">
                                                 <svg
@@ -72,21 +72,18 @@ const Hero = () => {
                                         </a>
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
-                        <div className="hidden px-4 lg:block lg:w-1/12"></div>
-                        <div className="w-full px-4 lg:w-5/12">
-                            <div className="lg:ml-auto lg:text-right">
-                                <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                                    <img
-                                        src="http://www.ceylonhospital.com/assets/images/after%20(2).png"
-                                        alt="hero"
-                                        className="max-w-full lg:ml-auto"
-                                    />
-                                    <span className="absolute -bottom-8 -left-8 z-[-1]">
-                                    </span>
-                                </div>
+
+                        {/* Right Image Section */}
+                        <div className="w-full px-4 lg:w-6/12">
+                            <div className="relative z-10 flex justify-center lg:ml-auto lg:pt-0">
+                                <img
+                                    src="http://www.ceylonhospital.com/assets/images/after%20(2).png"
+                                    alt="hero"
+                                    className="max-w-full h-auto lg:ml-auto transition-transform duration-300 hover:scale-105"
+                                />
+                                <span className="absolute -bottom-8 -left-8 z-[-1] w-[150px] h-[150px] bg-gradient-to-r from-green-500 to-green-900 rounded-full opacity-30 lg:opacity-50"></span>
                             </div>
                         </div>
                     </div>
@@ -95,6 +92,7 @@ const Hero = () => {
         </>
     );
 };
+
 
 export default Hero;
 

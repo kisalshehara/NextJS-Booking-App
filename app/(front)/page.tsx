@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <section className="max-w-6xl mx-auto">
+    <section className="max-w-8xl mx-auto">
       <Hero/>
       <TabbedSection/>
       <Brands/>

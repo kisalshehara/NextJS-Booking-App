@@ -4,22 +4,28 @@ import React from "react";
 const ServiceCard = ({ title, details, icon }) => {
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-8 rounded-lg bg-white p-10 shadow-lg dark:bg-dark">
-        <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary text-white">
+      <div className="relative mb-8 overflow-hidden rounded-2xl bg-white p-10 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:bg-dark/90">
+        <div className="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-green-600 text-white shadow-lg">
           {icon}
         </div>
-        <h4 className="mb-3 text-xl font-semibold text-dark dark:text-white">
+        <h4 className="mb-3 text-xl font-semibold text-gray-800 transition-colors duration-300 dark:text-white">
           {title}
         </h4>
-        <p className="text-body-color">{details}</p>
+        <p className="text-body-color text-gray-600 dark:text-gray-300">
+          {details}
+        </p>
+
+        {/* Background Gradient */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 to-green-600 opacity-10 pointer-events-none"></div>
       </div>
     </div>
   );
 };
 
+
 const TabbedSection = () => {
   return (
-    <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] -mt-[120px]">
+    <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] -mt-[20px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -40,8 +46,8 @@ const TabbedSection = () => {
 
         <div className="-mx-4 flex flex-wrap">
           <ServiceCard
-            title="Refreshing Design"
-            details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics matter."
+            title="Online Consultation"
+            details="Receive expert medical advice from qualified doctors through our secure online platform. Consult with specialists across various fields, discuss your symptoms, and receive prescriptions without leaving your home."
             icon={
               <svg
                 width="36"
@@ -59,8 +65,8 @@ const TabbedSection = () => {
           />
 
           <ServiceCard
-            title="Based on Tailwind CSS"
-            details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics matter."
+            title="In-Person Consultation"
+            details="For those who prefer face-to-face interaction, we offer in-hospital consultations with our team of experienced doctors. Book your appointments online and visit us for personalized and professional medical care."
             icon={
               <svg
                 width="36"
@@ -80,8 +86,8 @@ const TabbedSection = () => {
           />
 
           <ServiceCard
-            title="100+ Components"
-            details="We enjoy working with discerning clients, people for whom quality, service, integrity & aesthetics matter."
+            title="Medication & Aftercare"
+            details="We ensure that our patients receive the right medication and post-treatment care. Whether online or in person, our team will guide you through your recovery process with regular follow-ups and aftercare services."
             icon={
               <svg
                 width="36"
