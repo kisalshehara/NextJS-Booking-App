@@ -1,0 +1,73 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: -30px;
+}
+
+.card {
+  background: #e6ffeb; /* Light creamy color */
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Soft border */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  background: #bffdbc; /* Soft green color on hover */
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardContent h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3e50;
+}
+
+.cardContent p {
+  color: #607d8b; /* Light grayish-blue */
+  font-size: 0.9rem;
+}
+
+.cardContent img {
+  border-radius: 50%;
+  background-color: #e0f2f1; /* Light green background for images */
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cardContent img:hover {
+  transform: scale(1.1); /* Slight zoom on image hover */
+}
+
+/* More hover effects */
+.card:hover h3 {
+  color: #34a853; /* Darker green for heading on hover */
+}
+
+.card:hover p {
+  color: #34a853; /* Darker green for text on hover */
+}
