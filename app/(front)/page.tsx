@@ -3,6 +3,8 @@ import Hero from "@/components/Frontend/Hero";
 import TabbedSection from "@/components/Frontend/TabbedSection";
 import Services from "@/components/Frontend/Services/ServicesList";
 import React from "react";
+import DoctorsList from "@/components/DoctorsList";
+import DoctorCard from "@/components/DoctorCard";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <TabbedSection/>
       <Brands/>
       <Services/>
+      <DoctorsList/>
+      
     
       
 
