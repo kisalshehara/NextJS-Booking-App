@@ -11,13 +11,9 @@ export default function Home() {
     <section className="max-w-8xl mx-auto">
       <Hero/>
       <TabbedSection/>
-      <Brands/>
       <Services/>
       <DoctorsList/>
-      
-    
-      
-
+      <Brands/>
     </section>
   );
 }

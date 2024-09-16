@@ -16,7 +16,7 @@ function DoctorsList() {
             <SectionHeading title="CH Connect Online Consultation" className="small-heading" />
               <div className="flex items-center">
                 <ToggleButton />
-                <span className="ml-2">Within 2 hours</span>
+                <span className="ml-2">Within Today</span>
               </div>
             </div>
 
