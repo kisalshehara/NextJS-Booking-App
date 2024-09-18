@@ -79,7 +79,7 @@ const Hero = () => {
                         <div className="w-full px-4 lg:w-6/12">
                             <div className="relative z-10 flex justify-center lg:ml-auto lg:pt-0">
                                 <img
-                                    src="http://www.ceylonhospital.com/assets/images/after%20(2).png"
+                                    src="https://i.ibb.co/PcWY6dr/ayubowan.png"
                                     alt="hero"
                                     className="max-w-full h-auto lg:ml-auto transition-transform duration-300 hover:scale-105"
                                 />

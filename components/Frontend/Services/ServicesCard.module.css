@@ -19,19 +19,23 @@
 }
 
 .card {
-  background: #e6ffeb; /* Light creamy color */
+  background: #e6ffeb;
+  /* Light creamy color */
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Soft border */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Soft border */
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
-  background: #bffdbc; /* Soft green color on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  /* Stronger shadow on hover */
+  background: #bffdbc;
+  /* Soft green color on hover */
 }
 
 .cardContent {
@@ -48,26 +52,31 @@
 }
 
 .cardContent p {
-  color: #607d8b; /* Light grayish-blue */
+  color: #607d8b;
+  /* Light grayish-blue */
   font-size: 0.9rem;
 }
 
 .cardContent img {
   border-radius: 50%;
-  background-color: #e0f2f1; /* Light green background for images */
+  background-color: #e0f2f1;
+  /* Light green background for images */
   padding: 0.5rem;
   transition: transform 0.3s ease;
 }
 
 .cardContent img:hover {
-  transform: scale(1.1); /* Slight zoom on image hover */
+  transform: scale(1.1);
+  /* Slight zoom on image hover */
 }
 
 /* More hover effects */
 .card:hover h3 {
-  color: #34a853; /* Darker green for heading on hover */
+  color: #34a853;
+  /* Darker green for heading on hover */
 }
 
 .card:hover p {
-  color: #34a853; /* Darker green for text on hover */
+  color: #34a853;
+  /* Darker green for text on hover */
 }

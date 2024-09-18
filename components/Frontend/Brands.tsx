@@ -46,7 +46,7 @@ const brandsData: SingleImageProps[] = [
 export default function Brands() {
   return (
     <section className="bg-white py-20 lg:py-[120px] dark:bg-dark -mt-[100px]">
-        <h2 className="text-center pb-6"><b>Our Partners</b></h2>
+      <h2 className="text-center pb-6"><b>Our Partners</b></h2>
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

@@ -1,101 +1,88 @@
-import React from 'react';
+import { Video } from 'lucide-react';
 import Link from 'next/link';
+import React from 'react';
+import Image from 'next/image';
 
 function DoctorCard() {
-  const doctors = [
-    {
-      name: "Dr. Daya Madoluwa",
-      specialty: "Orthopedic",
-      price: "$127",
-      discountedPrice: "$127",
-      available: "AVAILABLE TODAY",
-      times: ["8:30 am", "9:00 am", "9:30 am", "10:00 am"],
-      image: "https://i.ibb.co/cFmtWvw/doctor-1.jpg",
-      url: "/doctor/dr-daya-madoluwa" // URL to redirect
-    },
-    {
-      name: "Dr. Devinda Hettiarachchi",
-      specialty: "Neurology",
-      price: "$172",
-      discountedPrice: "$162",
-      available: "AVAILABLE TODAY",
-      times: ["8:30 am", "9:00 am", "9:30 am", "10:00 am", "10:30 am"],
-      image: "https://i.ibb.co/800ZTWg/Dr-devinda.jpg",
-      url: "/doctor/dr-devinda-hettiarachchi" // URL to redirect
-    },
-    {
-      name: "Dr. Prasanga Karunarathna",
-      specialty: "Orthopedic",
-      price: "$126",
-      discountedPrice: "$116",
-      available: "AVAILABLE TOMORROW",
-      times: ["8:30 am", "9:00 am", "9:30 am", "10:00 am", "10:30 am"],
-      image: "https://i.ibb.co/HN51Y8F/Dr-Prasanga-Karunarathna.jpg",
-      url: "/doctor/dr-prasanga-karunarathna" // URL to redirect
-    }
-  ];
+    const TimeStamps = [
+        { time: "8:30", period: "am" },
+        { time: "9:00", period: "am" },
+        { time: "9:30", period: "am" },
+        { time: "10:00", period: "am" },
+        { time: "10:30", period: "am" }
+    ];
 
-  return (
-    <div className="bg-transparent py-8 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {doctors.map((doctor, index) => (
-          <Link key={index} href={doctor.url} passHref>
-            <div
-              className="relative p-6 bg-white bg-opacity-60 backdrop-blur-xl rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out cursor-pointer"
-            >
-              <div className="flex items-center mb-4">
-                {/* Display Doctor Image */}
-                <img
-                  src={doctor.image}
-                  alt={doctor.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h3 className="text-2xl font-semibold text-green-800">{doctor.name}</h3>
-                  <p className="text-gray-600">{doctor.specialty}</p>
+    return (
+        <div className='border border-gray-200 bg-white inline-flex flex-col py-6 px-4 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105'>
+            {/* Header section with hover effect */}
+            <Link href=''>
+                <div className='flex flex-col'>
+                    <h2 className='text-xl font-semibold text-gray-800 hover:text-green-700 transition-colors duration-200 ease-in-out'>
+                        Dr. Daya Madoluwa
+                    </h2>
                 </div>
-              </div>
+            </Link>
 
-              <div className="mb-4">
-                <p className="text-green-700 font-semibold text-lg">
-                  {doctor.available}
-                </p>
-                <span className="block bg-green-100 text-green-600 px-4 py-2 mt-2 rounded-full text-sm">
-                  {doctor.discountedPrice} with CH Care Plus
-                </span>
-              </div>
 
-              <div className="mb-4">
-                <p className="line-through text-gray-500">{doctor.price}</p>
-                <p className="text-xl font-semibold text-green-600">{doctor.discountedPrice}</p>
-              </div>
+            {/* Doctor info */}
+            <div className='flex items-center mt-6 gap-6'>
+                <div className="relative">
+                    <Image
+                        src='https://i.ibb.co/cFmtWvw/doctor-1.jpg'
+                        width={243}
+                        height={247}
+                        alt='Doctor Image'
+                        className='w-24 h-24 rounded-full object-cover'
+                    />
+                    <div className='absolute -bottom-2 -right-2 bg-green-200 text-green-700 w-10 h-10 flex items-center justify-center rounded-full shadow-md'>
+                        <Video className='w-6 h-6' />
+                    </div>
+                </div>
 
-              {/* Time Slots */}
-              <div className="grid grid-cols-3 gap-3">
-                {doctor.times.map((time, i) => (
-                  <button
-                    key={i}
-                    className="py-2 px-4 bg-green-500 text-white rounded-full text-sm font-medium hover:bg-green-600 transition"
-                  >
-                    {time}
-                  </button>
-                ))}
-              </div>
+                {/* Details */}
+                <div className="flex flex-col gap-2">
+                    {/* Dark green highlighted "Orthopedic" */}
+                    <span className='bg-green-700 text-white px-3 py-1 rounded-lg'>
+                        Orthopedic
+                    </span>
 
-              <div className="mt-4 text-right">
-                <span className="text-green-500 hover:text-green-700 transition">
-                  More times
-                </span>
-              </div>
-
-              {/* Decorative Blur in Background */}
-              <div className="absolute inset-0 -z-10 rounded-2xl bg-white opacity-10 blur-xl"></div>
+                    {/* Smaller "Available Today" with hover effect */}
+                    <p className="bg-green-300 text-white py-1 px-3 text-sm uppercase rounded-md transition-all duration-200 ease-in-out hover:bg-green-400">
+                        Available Today
+                    </p>
+                    <span className='text-lg font-semibold text-gray-800'>📅 Tue 22 Mar</span>
+                </div>
             </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+
+            {/* Consultation Fee */}
+            <div className="pt-6 mt-4 border-t border-gray-300">
+                <h3 className='flex flex-col gap-2'>
+                    <span className='text-lg text-gray-400'>
+                        Consultation Fee <span className='line-through'>$28</span>
+                    </span>
+                    <span className='text-lg text-green-700 font-bold'>
+                        $20 <span className='text-green-500'>with CH Care Plus</span>
+                    </span>
+                </h3>
+
+                {/* Time buttons */}
+                <div className="py-3 grid grid-cols-3 gap-3">
+                    {TimeStamps.map((item, i) => (
+                        <Link key={i} href='#'>
+                            <div className='bg-green-300 hover:bg-green-400 text-white py-2 px-4 text-center rounded-lg transition-all duration-200 ease-in-out'>
+                                {item.time} {item.period}
+                            </div>
+                        </Link>
+                    ))}
+                    <Link href='#'>
+                        <div className='bg-gray-200 hover:bg-gray-300 text-center py-2 px-4 rounded-lg transition-all duration-200 ease-in-out'>
+                            More times
+                        </div>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default DoctorCard;
