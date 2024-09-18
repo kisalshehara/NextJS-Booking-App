@@ -3,7 +3,8 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
-function DoctorCard() {
+function DoctorCard({isInPerson=false}:{isInPerson?:boolean}) {
+
     const TimeStamps = [
         { time: "8:30", period: "am" },
         { time: "9:00", period: "am" },
@@ -15,7 +16,7 @@ function DoctorCard() {
     return (
         <div className='border border-gray-200 bg-white inline-flex flex-col py-6 px-4 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105'>
             {/* Header section with hover effect */}
-            <Link href=''>
+            <Link href='/doctors/slug'>
                 <div className='flex flex-col'>
                     <h2 className='text-xl font-semibold text-gray-800 hover:text-green-700 transition-colors duration-200 ease-in-out'>
                         Dr. Daya Madoluwa
@@ -34,9 +35,9 @@ function DoctorCard() {
                         alt='Doctor Image'
                         className='w-24 h-24 rounded-full object-cover'
                     />
-                    <div className='absolute -bottom-2 -right-2 bg-green-200 text-green-700 w-10 h-10 flex items-center justify-center rounded-full shadow-md'>
+                    {isInPerson && <div className='absolute -bottom-2 -right-2 bg-green-200 text-green-700 w-10 h-10 flex items-center justify-center rounded-full shadow-md'>
                         <Video className='w-6 h-6' />
-                    </div>
+                    </div>}
                 </div>
 
                 {/* Details */}
@@ -74,7 +75,7 @@ function DoctorCard() {
                             </div>
                         </Link>
                     ))}
-                    <Link href='#'>
+                    <Link href='/doctors/slug'>
                         <div className='bg-gray-200 hover:bg-gray-300 text-center py-2 px-4 rounded-lg transition-all duration-200 ease-in-out'>
                             More times
                         </div>

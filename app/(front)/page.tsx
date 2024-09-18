@@ -12,6 +12,7 @@ export default function Home() {
       <TabbedSection />
       <Services />
       <DoctorsList />
+      {/* <DoctorsList className="bg-white py-8" title="In-person Consulting" isInPerson={true}/> */}
       <Brands />
     </section>
   );
