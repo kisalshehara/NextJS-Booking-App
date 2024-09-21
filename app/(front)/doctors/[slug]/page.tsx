@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion'; // For smooth animations
+import { motion } from 'framer-motion'; 
 
 const DoctorProfile = () => {
   const [activeTab, setActiveTab] = useState('info');
   const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
 
-  // Array to store dates and time slots
+  // Array to store dates and time slots / API (Later)
   const timeSlots = [
     {
       date: 'Mon Sep 11',
